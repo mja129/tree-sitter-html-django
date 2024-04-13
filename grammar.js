@@ -139,10 +139,6 @@ module.exports = grammar({
     ),
 
     text: $ => choice($.djangonode, /[^<>&{%\s]([^<>&{%]*[^<>&{%\s])?/),
-    // /([^<>&\s\{]|\{[^<>&\s{%#])+/,
-      //$.djangonode,
-      ///([^\{]|\{[^{%#])+/
-      //),
 
     djangonode: $ => choice(
       $._expression,
